@@ -1,0 +1,16 @@
+# Python stuff
+.Python
+env/
+build/
+dist/
+var/
+venv/
+
+# Other stuff
+.cache
+.DS_Store
+.vscode
+.idea
+*.tar.gz
+site
+.nox
