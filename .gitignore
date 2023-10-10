@@ -5,6 +5,7 @@ build/
 dist/
 var/
 venv/
+__pycache__/
 
 # Other stuff
 .cache
