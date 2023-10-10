@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="css/grid-wrapper.css">
+{% endblock %}
+{% block content %}
+    {# Start projects in the Ansible ecosystem #}
+    {% set projects = [
+        {
+            "name": "Ansible Collections",
+            "description": "Ansible collections offer distributions of playbooks, roles, modules, and plugins.",
+            "multi_docs": {
+                "index": {
+                    "url": "https://docs.ansible.com/ansible/latest/collections/index.html",
+                    "label": "Collection index"
+                },
+                "user_guide": {
+                    "url": "https://docs.ansible.com/ansible/latest/collections_guide/index.html",
+                    "label": "Find out how to use collections"
+                },
+                "contributor_guide": {
+                    "url": "https://docs.ansible.com/ansible/devel/community/contributions_collections.html#collections-contributions",
+                    "label": "Learn how to contribute to collections"
+                },
+                "plugin_index": {
+                    "url": "https://docs.ansible.com/ansible/latest/collections/all_plugins.html",
+                    "label": "Index of all modules and plugins"
+                }
+            }
+        },
+        {
+            "name": "Ansible Language Server",
+            "description": "Ansible Language Server implements language server protocol (LSP) to highlight and check Ansible syntax.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/language-server/",
+                "label": "Visit Ansible Language Server documentation"
+            }
+        },
+        {
+            "name": "Ansible AWX",
+            "description": "AWX provides a web-based user interface, REST API, and task engine built on top of Ansible.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/awx/",
+                "label": "Visit AWX documentation"
+            }
+        },
+        {
+            "name": "AWX Operator",
+            "description": "Ansible AWX Operator offers built-in intelligence and operational best practices for deploying on Kubernetes environments.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/awx-operator/",
+                "label": "Visit AWX Operator documentation"
+            }
+        },
+        {
+            "name": "Ansible Builder",
+            "description": "Ansible Builder lets you create Execution Environments, which are container images that act as Ansible control nodes.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/builder/",
+                "label": "Visit Ansible Builder documentation"
+            }
+        },
+        {
+            "name": "Ansible Compat",
+            "description": "Compat is a Python package that assists with compatibility between different Ansible releases, starting at version 2.9.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/compat/",
+                "label": "Visit Ansible Compat documentation"
+            }
+        },
+        {
+            "name": "Ansible Core",
+            "description": "Ansible Core is the language and runtime that powers automation.",
+            "docs": {
+                "url": "https://docs.ansible.com/ansible-core/devel/index.html",
+                "label": "Visit Ansible Core documentation"
+            }
+        },
+        {
+            "name": "Event-Driven Ansible Server",
+            "description": "Event-Driven Ansible Server offers scalable and flexible automation that can subscribe to a wide variety of event sources.",
+            "docs": {
+                "url": "https://github.com/ansible/eda-server",
+                "label": "Visit Event-Driven Ansible Server documentation"
+            }
+        },
+        {
+            "name": "Edge Automation",
+            "description": "Edge provides tooling and collections to run automation jobs on device endpoints at the very edge of your infrastructure.",
+            "multi_docs": {
+                "osbuild": {
+                    "link": "https://github.com/redhat-cop/infra.osbuild",
+                    "label": "Osbuild Composer Collection"
+                },
+                "cip": {
+                    "link": "https://github.com/ansible-collections/community.cip",
+                    "label": "Common Industrial Protocol (CIP) Collection"
+                },
+                "fdo": {
+                    "link": "https://github.com/ansible-collections/community.fdo",
+                    "label": "FDO Collection"
+                },
+                "microshift": {
+                    "link": "https://github.com/ansible-collections/edge.microshift/",
+                    "label": "MicroShift Collection"
+                }
+            }
+        },
+        {
+            "name": "Galaxy",
+            "description": "Galaxy provides a hub for discovering and sharing Ansible community content.",
+            "docs": {
+                "url": "https://galaxy.ansible.com/docs/",
+                "label": "Visit Galaxy documentation"
+            }
+        },
+        {
+            "name": "Galaxy NG",
+            "description": "Galaxy NG jumpstarts automation projects with Ansible community content.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/galaxy-ng/",
+                "label": "Visit Galaxy NG documentation"
+            }
+        },
+        {
+            "name": "Ansible Lint",
+            "description": "Lint improves code quality through proven best practices, patterns, and behaviors so that your Ansible content results in reliable and consistent automation.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/lint/",
+                "label": "Visit Ansible Lint documentation"
+            }
+        },
+        {
+            "name": "Molecule",
+            "description": "Molecule helps you develop and test Ansible roles.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/molecule/",
+                "label": "Visit Molecule documentation"
+            }
+        },
+        {
+            "name": "Ansible Navigator",
+            "description": "Ansible Navigator is a command-line tool for creating, reviewing, and troubleshooting Ansible content.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/navigator/",
+                "label": "Visit Ansible Navigator documentation"
+            }
+        },
+        {
+            "name": "Ansible Pylibssh",
+            "description": "Ansible Pylibssh provides Python bindings for Ansible with the libssh project.",
+            "docs": {
+                "url": "https://ansible-pylibssh.readthedocs.io/en/latest/",
+                "label": "Visit Ansible Pylibssh documentation"
+            }
+        },
+        {
+            "name": "Receptor",
+            "description": "Receptor is an overlay network that distributes workloads across a large and dispersed collection of nodes.",
+            "docs": {
+                "url": "https://receptor.readthedocs.io/en/latest/index.html",
+                "label": "Visit Receptor documentation"
+            }
+        },
+        {
+            "name": "Ansible Rulebook",
+            "description": "Ansible Rulebook is a command-line tool that listens to events so your automation can react when software or system states change.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/rulebook/",
+                "label": "Visit Ansible Rulebook documentation"
+            }
+        },
+        {
+            "name": "Ansible Runner",
+            "description": "Ansible Runner provides a stable and consistent interface abstraction to Ansible.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/runner/",
+                "label": "Visit Ansible Runner documentation"
+            }
+        },
+        {
+            "name": "Ansible SDK",
+            "description": "Ansible SDK is a toolkit that lets you harness the power and simplicity of Ansible automation directly from your applications.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/sdk/",
+                "label": "Visit Ansible SDK documentation"
+            }
+        },
+        {
+            "name": "Ansible Sign",
+            "description": "Ansible Sign is a utility for signing and verifying Ansible content.",
+            "docs": {
+                "url": "https://ansible.readthedocs.io/projects/sign/",
+                "label": "Visit Ansible Sign documentation"
+            }
+        },
+        {
+            "name": "Ansible Test",
+            "description": "Ansible Test is a command-line tool for performing sanity, unit, and integration testing with Ansible Core and collections.",
+            "docs": {
+                "url": "https://docs.ansible.com/ansible-core/devel/dev_guide/testing_running_locally.html",
+                "label": "Visit Ansible Test documentation"
+            }
+        },
+        {
+            "name": "Ansible VS Code Extension",
+            "description": "The VS Code extension adds Ansible language support to Visual Studio Code and OpenVSX compatible editors.",
+            "docs": {
+                "url": "https://marketplace.visualstudio.com/items?itemName=redhat.ansible",
+                "label": "Visit the Ansible extension on the VS Code marketplace"
+            }
+        }
+    ] %}
+    {# End projects in the Ansible ecosystem #}
+    <div class="grid-wrapper">
+        <div class="width-3-12 width-12-12-m">
+            <img src="img/community_logo.svg"
+                 alt="Ansible community logo"
+                 width="auto"
+                 height="auto">
+        </div>
+        <div class="width-9-12 width-12-12-m">
+            <h2>Ansible ecosystem</h2>
+            <p>Projects in the Ansible ecosystem let you expand automation to a virtually unlimited set of use cases.</p>
+        </div>
+        {% for project in projects %}
+            <div class="width-6-12 width-12-12-m">
+                <h3>{{ project['name'] }}</h3>
+                <p>{{ project['description'] }}</p>
+                {% if project['docs'] %}
+                    <a href="{{ project.docs['url'] }}" target="_blank" role="button">{{ project.docs['label'] }}</a>
+                {% elif project['multi_docs'] %}
+                    <ul>
+                        {% for key, item in project['multi_docs'].items() %}
+                            <li>
+                                <a href="{{ item.link }}" target="_blank" role="button">{{ item.label }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

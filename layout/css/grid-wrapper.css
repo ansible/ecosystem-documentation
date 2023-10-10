@@ -1,0 +1,102 @@
+.grid-wrapper, .component-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1em;
+  clear: both;
+}
+.width-1-12 {
+  grid-column: span 1;
+}
+.width-2-12 {
+  grid-column: span 2;
+}
+.width-3-12 {
+  grid-column: span 3;
+}
+.width-4-12 {
+  grid-column: span 4;
+}
+.width-5-12 {
+  grid-column: span 5;
+}
+.width-6-12 {
+  grid-column: span 6;
+}
+.width-7-12 {
+  grid-column: span 7;
+}
+.width-8-12 {
+  grid-column: span 8;
+}
+.width-9-12 {
+  grid-column: span 9;
+}
+.width-10-12 {
+  grid-column: span 10;
+}
+.width-11-12 {
+  grid-column: span 11;
+}
+.width-12-12 {
+  grid-column: span 12;
+}
+@media (max-width: 48em) {
+  .width-1-12-m {
+    grid-column: span 1;
+  }
+}
+@media (max-width: 48em) {
+  .width-2-12-m {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 48em) {
+  .width-3-12-m {
+    grid-column: span 3;
+  }
+}
+@media (max-width: 48em) {
+  .width-4-12-m {
+    grid-column: span 4;
+  }
+}
+@media (max-width: 48em) {
+  .width-5-12-m {
+    grid-column: span 5;
+  }
+}
+@media (max-width: 48em) {
+  .width-6-12-m {
+    grid-column: span 6;
+  }
+}
+@media (max-width: 48em) {
+  .width-7-12-m {
+    grid-column: span 7;
+  }
+}
+@media (max-width: 48em) {
+  .width-8-12-m {
+    grid-column: span 8;
+  }
+}
+@media (max-width: 48em) {
+  .width-9-12-m {
+    grid-column: span 9;
+  }
+}
+@media (max-width: 48em) {
+  .width-10-12-m {
+    grid-column: span 10;
+  }
+}
+@media (max-width: 48em) {
+  .width-11-12-m {
+    grid-column: span 11;
+  }
+}
+@media (max-width: 48em) {
+  .width-12-12-m {
+    grid-column: span 12;
+  }
+}
