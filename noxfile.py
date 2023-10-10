@@ -3,6 +3,18 @@ from pathlib import Path
 
 import nox
 
+
+@nox.session
+def build(session: nox.Session):
+    session.install(
+        "-r",
+        "tests/requirements.in",
+        "-c",
+        "tests/requirements.txt",
+    )
+    session.run("python", "-I", "-m", "mkdocs", "build", *session.posargs)
+
+
 requirements_files = list(
     {path.name.replace(".in", "") for path in Path("tests").glob("*in")}
     - {"constraints", "constraints-base"}
