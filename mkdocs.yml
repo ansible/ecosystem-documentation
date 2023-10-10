@@ -40,6 +40,7 @@ theme:
 
 nav:
   - index.md
+  - ecosystem.md
 
 exclude_docs:
   README.md
