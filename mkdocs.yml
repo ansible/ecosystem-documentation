@@ -13,7 +13,6 @@ theme:
     - content.code.copy
     - content.action.edit
     - navigation.expand
-    - navigation.sections
     - navigation.instant
     - navigation.indexes
     - navigation.tracking
@@ -41,6 +40,13 @@ theme:
 nav:
   - index.md
   - ecosystem.md
+  - Getting started with execution environments:
+    - index: getting_started_ee/index.md
+    - Introduction: getting_started_ee/introduction.md
+    - getting_started_ee/setup_environment.md
+    - getting_started_ee/build_execution_environment.md
+    - getting_started_ee/run_execution_environment.md
+    - getting_started_ee/run_community_ee_image.md
 
 exclude_docs:
   README.md
