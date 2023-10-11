@@ -7,7 +7,7 @@ You can explore Ansible projects and find links to the related documentation.
 
 ## Extending Ansible automation
 
-Ansible is a programming language and runtime plus an entire ecosystem of projects that extending automation capabilities to a virtually unlimited set of use cases.
+Ansible is a programming language and runtime plus an entire ecosystem of projects that extends automation capabilities to a virtually unlimited set of use cases.
 
 For example, the Ansible ecosystem gives you tools you need to:
 
