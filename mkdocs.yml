@@ -42,7 +42,7 @@ nav:
   - ecosystem.md
   - Getting started with execution environments:
     - index: getting_started_ee/index.md
-    - Introduction: getting_started_ee/introduction.md
+    - getting_started_ee/introduction.md
     - getting_started_ee/setup_environment.md
     - getting_started_ee/build_execution_environment.md
     - getting_started_ee/run_execution_environment.md
