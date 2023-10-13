@@ -1,6 +1,6 @@
-Welcome to `Ansible ecosystem documentation`.
+Welcome to Ansible ecosystem documentation.
 
-Here you can find `How To` guides and `tutorials` for cross-project use cases within the Ansible ecosystem in this docsite.
+Here you can find How To guides and tutorials for cross-project use cases within the Ansible ecosystem in this docsite.
 
 If you're looking for documentation related to a specific Ansible project, visit the [ecosystem page](ecosystem.md).
 You can explore Ansible projects and find links to the related documentation.
@@ -11,7 +11,7 @@ Ansible is a project ecosystem that extends automation capabilities to a wide ra
 For example, the Ansible ecosystem provides tooling to:
 
 * Create consistent, reliable playbooks for trusted automation
-* Add automation to your `ci` workflows
+* Add automation to your workflows
 * Build and use containerized control nodes
 * Use community collections for automation
 * Build a network mesh for executing automation jobs
