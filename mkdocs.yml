@@ -33,7 +33,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   locale: en
-  custom_dir: layout/
+  custom_dir: templates/
   static_templates:
     - ecosystem.html
 
