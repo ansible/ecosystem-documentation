@@ -21,3 +21,11 @@ The resulting container image represents an Ansible control node that contains:
 - standard EE packages
 - `community.postgresql` collection
 - `psycopg2-binary` Python package
+
+## Table of contents
+
+* [Introduction to Execution Environments](introduction.md)
+* [Setting up your environment](setup_environment.md)
+* [Building your first Execution Environment](build_execution_environment.md)
+* [Running your EE](run_execution_environment.md)
+* [Running Ansible with the community EE image](run_community_ee_image.md)
