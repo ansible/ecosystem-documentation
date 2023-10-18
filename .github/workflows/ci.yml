@@ -1,0 +1,12 @@
+name: Ansible ecosystem CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "main"
+  workflow_dispatch:
+
+jobs:
+  nox:
+    uses: ./.github/workflows/reusable-nox.yml
