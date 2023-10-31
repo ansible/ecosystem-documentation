@@ -36,6 +36,8 @@ EOF
 ansible-navigator run test_localhost.yml --execution-environment-image ghcr.io/ansible-community/community-ee-minimal:latest --mode stdout
 ```
 
+Want to discuss the community EE images and other EE-related topics? Join the [forum group](https://forum.ansible.com/g/ExecutionEnvs)!
+
 ## See also
 
 - [Building your first EE](build_execution_environment.md)
