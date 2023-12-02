@@ -12,8 +12,8 @@ You can run your EE on the command line against `localhost` or a remote target u
     cat > test_localhost.yml<<EOF
     - name: Gather and print local facts
       hosts: localhost
-      become: yes
-      gather_facts: yes
+      become: true
+      gather_facts: true
       tasks:
 
       - name: Print facts
@@ -63,8 +63,8 @@ Execute a playbook inside the `postgresql_ee` EE against a remote host machine a
     cat > test_remote.yml<<EOF
     - name: Gather and print facts
       hosts: all
-      become: yes
-      gather_facts: yes
+      become: true
+      gather_facts: true
       tasks:
 
       - name: Print facts
