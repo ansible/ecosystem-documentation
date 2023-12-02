@@ -22,8 +22,8 @@ Now, create a simple test playbook and run it against localhost inside the conta
 cat > test_localhost.yml<<EOF
 - name: Gather and print local facts
   hosts: localhost
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
   tasks:
 
   - name: Print facts
