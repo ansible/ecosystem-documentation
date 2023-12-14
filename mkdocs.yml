@@ -33,13 +33,9 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   locale: en
-  custom_dir: templates/
-  static_templates:
-    - ecosystem.html
 
 nav:
   - index.md
-  - ecosystem.md
   - Getting started with execution environments:
     - index: getting_started_ee/index.md
     - getting_started_ee/introduction.md
