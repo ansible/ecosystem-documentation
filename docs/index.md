@@ -2,7 +2,7 @@ Welcome to Ansible ecosystem documentation.
 
 Here you can find How To guides and tutorials for cross-project use cases within the Ansible ecosystem in this docsite.
 
-If you're looking for documentation related to a specific Ansible project, visit the [ecosystem page](ecosystem.md).
+If you're looking for documentation related to a specific Ansible project, visit the [ecosystem page on docs.ansible.com](https://docs.ansible.com/ecosystem.html).
 You can explore Ansible projects and find links to the related documentation.
 
 ## Extending Ansible automation
