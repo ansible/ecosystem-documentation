@@ -6,6 +6,10 @@ updates:
       interval: "weekly"
   - package-ecosystem: "pip"
     directory: "/tests"
+    groups:
+      dependencies:
+        patterns:
+          - "*"
     schedule:
       interval: "weekly"
     labels:
