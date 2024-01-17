@@ -53,7 +53,7 @@ Execute a playbook inside the `postgresql_ee` EE against a remote host machine a
     cat > inventory/hosts.yml<<EOF
     all:
       hosts:
-        192.168.0.2  # Replace with the IP of your target host
+        192.168.0.2:  # Replace with the IP of your target host
     EOF
     ```
 
