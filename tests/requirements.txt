@@ -77,6 +77,7 @@ mkdocs==1.5.3
     #   mkdocs-material
     #   mkdocs-minify-plugin
     #   mkdocs-monorepo-plugin
+    #   mkdocs-redirects
     #   mkdocstrings
 mkdocs-ansible==0.2.0
     # via -r tests/requirements.in
@@ -96,6 +97,8 @@ mkdocs-minify-plugin==0.7.1
     # via mkdocs-ansible
 mkdocs-monorepo-plugin==1.0.5
     # via mkdocs-ansible
+mkdocs-redirects==1.2.1
+    # via -r tests/requirements.in
 mkdocstrings==0.24.0
     # via
     #   mkdocs-ansible
