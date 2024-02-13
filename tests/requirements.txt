@@ -7,7 +7,9 @@
 babel==2.13.1
     # via mkdocs-material
 beautifulsoup4==4.12.2
-    # via mkdocs-htmlproofer-plugin
+    # via
+    #   linkchecker
+    #   mkdocs-htmlproofer-plugin
 cairocffi==1.6.1
     # via cairosvg
 cairosvg==2.7.1
@@ -32,6 +34,8 @@ cssselect2==0.7.0
     # via cairosvg
 defusedxml==0.7.1
     # via cairosvg
+dnspython==2.5.0
+    # via linkchecker
 ghp-import==2.1.0
     # via mkdocs
 griffe==0.38.1
@@ -47,6 +51,8 @@ jinja2==3.1.2
     #   mkdocstrings
 jsmin==3.0.1
     # via mkdocs-minify-plugin
+linkchecker==10.4.0
+    # via mkdocs-ansible
 markdown==3.5.1
     # via
     #   markdown-include
@@ -69,7 +75,7 @@ mergedeep==1.3.4
     # via mkdocs
 mkdocs==1.5.3
     # via
-    #   -r tests/requirements.in
+    #   -r requirements.in
     #   mkdocs-ansible
     #   mkdocs-autorefs
     #   mkdocs-gen-files
@@ -79,8 +85,8 @@ mkdocs==1.5.3
     #   mkdocs-monorepo-plugin
     #   mkdocs-redirects
     #   mkdocstrings
-mkdocs-ansible==0.2.0
-    # via -r tests/requirements.in
+mkdocs-ansible==24.2.1
+    # via -r requirements.in
 mkdocs-autorefs==0.5.0
     # via mkdocstrings
 mkdocs-gen-files==0.5.0
@@ -98,7 +104,7 @@ mkdocs-minify-plugin==0.7.1
 mkdocs-monorepo-plugin==1.0.5
     # via mkdocs-ansible
 mkdocs-redirects==1.2.1
-    # via -r tests/requirements.in
+    # via -r requirements.in
 mkdocstrings==0.24.0
     # via
     #   mkdocs-ansible
@@ -146,6 +152,7 @@ regex==2023.10.3
     # via mkdocs-material
 requests==2.31.0
     # via
+    #   linkchecker
     #   mkdocs-htmlproofer-plugin
     #   mkdocs-material
 six==1.16.0
