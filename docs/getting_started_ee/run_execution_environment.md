@@ -81,7 +81,7 @@ Execute a playbook inside the `postgresql_ee` EE against a remote host machine a
     ansible-navigator run test_remote.yml -i inventory --execution-environment-image postgresql_ee:latest --mode stdout --pull-policy missing --enable-prompts -u student -k -K
     ```
 
-## SSH keys forwarding
+## SSH key forwarding
 
 If you run Ansible with SSH-keys-based authentication to avoid authentication prompts, use `ssh-agent` to forward the SSH keys to your EE:
 
