@@ -90,7 +90,7 @@ eval $(ssh-agent)
 ssh-add </path/to/your/private/key>
 ```
 
-To test the above playbook, add the `remote_user: <your_ssh_user>` field to the play and then run:
+To test the preceding playbook, add the `remote_user: <your_ssh_user>` field to the play and then run:
 
 ``` bash
 ansible-navigator run test_remote.yml -i inventory --execution-environment-image postgresql_ee:latest --mode stdout --pull-policy missing
