@@ -83,7 +83,7 @@ Execute a playbook inside the `postgresql_ee` EE against a remote host machine a
 
 ## SSH key forwarding
 
-If you run Ansible with SSH-keys-based authentication to avoid authentication prompts, use `ssh-agent` to forward the SSH keys to your EE:
+If you run Ansible with SSH-key-based authentication to avoid authentication prompts, use `ssh-agent` to forward the SSH keys to your EE:
 
 ``` bash
 eval $(ssh-agent)
