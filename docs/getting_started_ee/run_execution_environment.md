@@ -63,7 +63,6 @@ Execute a playbook inside the `postgresql_ee` EE against a remote host machine a
     cat > test_remote.yml<<EOF
     - name: Gather and print facts
       hosts: all
-      become: true
       gather_facts: true
       tasks:
 
@@ -81,6 +80,21 @@ Execute a playbook inside the `postgresql_ee` EE against a remote host machine a
     ``` bash
     ansible-navigator run test_remote.yml -i inventory --execution-environment-image postgresql_ee:latest --mode stdout --pull-policy missing --enable-prompts -u student -k -K
     ```
+
+## SSH key forwarding
+
+If you run Ansible with SSH-key-based authentication to avoid authentication prompts, use `ssh-agent` to forward the SSH keys to your EE:
+
+``` bash
+eval $(ssh-agent)
+ssh-add </path/to/your/private/key>
+```
+
+To test the preceding playbook, add the `remote_user: <your_ssh_user>` field to the play and then run:
+
+``` bash
+ansible-navigator run test_remote.yml -i inventory --execution-environment-image postgresql_ee:latest --mode stdout --pull-policy missing
+```
 
 ## See also
 
