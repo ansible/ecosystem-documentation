@@ -111,7 +111,7 @@ mkdocs-minify-plugin==0.7.1
     # via mkdocs-ansible
 mkdocs-monorepo-plugin==1.0.5
     # via mkdocs-ansible
-mkdocs-redirects==1.2.1
+mkdocs-redirects==1.2.2
     # via -r requirements.in
 mkdocstrings==0.24.0
     # via
